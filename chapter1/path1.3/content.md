@@ -38,7 +38,7 @@
   ![](images/git1.png)
 - 4.cd /home/was/docker_compose/prod-guoling/kdxy_interface_service
     ![](images/docker1.png)
-- 5.写 viDockerfile文件
+- 5.写 vi Dockerfile文件
       ```docker
       # Dockerfile for prod-image-guoling-kdxy_interface_service:20171127_01
       # 2017-11-27 Dockerfile
