@@ -1,5 +1,5 @@
 # 1.4. 订单状态通知(consumer)
-## 一. 部署 PROD 的宽带3.4 JOB(利用swarm集群部署)
+## 一. 部署 PROD 的宽带3.4 JOB
 - 在10.251.26.11(prod镜像库)上打镜像.
 - 在10.128.2.96上跑服务
 
@@ -88,3 +88,5 @@
     - 没有设置暴露端口   因为consumer或者job不需要对外暴露端口.
     - 日志目录		这个目录是我事先建好的  /app/logs1/prod-guoling/python-server/kdxy-consumer
 				大意:    在冒号【:】左边的是宿主机的目录，右边是容器的目录  
+11. 查看节点服务是否正常启动
+-   ![](images/ser1.png)
