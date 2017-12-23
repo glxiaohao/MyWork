@@ -90,4 +90,4 @@
     - 运行了2个服务	因为docker-cpmpose.yml文件中指定的是两个节点,所以跑了两个consumer.
     - 没有设置暴露端口   因为consumer或者job不需要对外暴露端口.
     - 日志目录		这个目录是我事先建好的  /app/logs1/prod-guoling/python-server/kdxy-consumer
-				大意:    在冒号【:】号左边的是宿主机的目录，右边是容器的目录  
+				大意:    在冒号【:】左边的是宿主机的目录，右边是容器的目录  
