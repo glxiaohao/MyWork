@@ -19,4 +19,4 @@
         -  查看日志的目录: 
             - 1.先确保在容器里面
             - 2.cd /opt/logs/python-apps-logs/kdxy_interface_service/6006  下面去查看.
-            - ![](images/ml3.png) 
+             ![](images/ml3.png) 
