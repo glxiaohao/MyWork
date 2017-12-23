@@ -5,7 +5,7 @@
         - 具体步骤入下:
             - 连接36服务器
             - cd /home/was/docker-compose/rc-guoling/base-image
-            - ![](images/ml1.png)
+              ![](images/ml1.png)
             - docker build -t base_image:v20171223 .
     -  2.给宽带协议接口打基础镜像.
         -  具体步骤入下:

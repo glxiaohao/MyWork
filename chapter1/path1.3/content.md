@@ -117,16 +117,16 @@
             - master_tyxb
             - prod
        ```  
-    确定  docker build -t - - - 1.localhost:5000/kdxy-interface:master_201712211 . 里面的master_201712211这个名字
-    2.所有的 only 里面的 值要和  master_201712211一致
+    - 确定  docker build -t localhost:5000/kdxy-interface:master_201712211 . 里面的master_201712211这个名字
+    - 2.所有的 only 里面的 值要和  master_201712211一致
         ![](images/zs1.png)
-    3.添加tag标签
+    - 3.添加tag标签
         ![](images/tag.png)
-    4.写tag
+    - 4.写tag
         ![](images/tag2.png)
-    5.查看新创建好了的表签
+    - 5.查看新创建好了的表签
         ![](images/tag4.png)
-    6.可以查看tag执行的变化状态
+    - 6.可以查看tag执行的变化状态
         ![](images/tag5.png)
-    7.在服务器上用命令查看结果
+    - 7.在服务器上用命令查看结果
         ![](images/linux2.png)
