@@ -12,7 +12,7 @@
 ### 具体步骤入下:
 - 1.在10.128.2.96服务器上写docker-compose文件
 - 2.vi docker-compose文件 具体内容如下:
-- ```linux
+  ```linux
   version: '3'
   services:
     prod-guoling-kdxy-service-33:
@@ -35,11 +35,10 @@
     service-net:
   ```
 - 3.git  合并本地最新代码和git上的master分子的代码(因为master 默认的是放生产的代码)
-- ![](images/git1.png)
+  ![](images/git1.png)
 - 4.cd /home/was/docker_compose/prod-guoling/kdxy_interface_service
     ![](images/docker1.png)
-- 5. 写Dockerfile文件
-    - vi Dockerfile文件
+- 5.写 viDockerfile文件
       ```docker
       # Dockerfile for prod-image-guoling-kdxy_interface_service:20171127_01
       # 2017-11-27 Dockerfile
@@ -71,7 +70,7 @@
       CMD ["python","RsaMain.py"]
       ```
 -  6.在pycharm 上编辑.gitlab-ci.yml文件
-     - ```linux
+       ```linux
         image: docker:latest
 
         before_script:
@@ -118,16 +117,16 @@
             - master_tyxb
             - prod
        ```  
-     1. 确定  docker build -t localhost:5000/kdxy-interface:master_201712211 . 里面的master_201712211这个名字
-     2. 所有的 only 里面的 值要和  master_201712211一致
+    确定  docker build -t - - - 1.localhost:5000/kdxy-interface:master_201712211 . 里面的master_201712211这个名字
+    2.所有的 only 里面的 值要和  master_201712211一致
         ![](images/zs1.png)
-     3. 添加tag标签
+    3.添加tag标签
         ![](images/tag.png)
-     4. 写tag
+    4.写tag
         ![](images/tag2.png)
-    5.  查看新创建好了的表签
+    5.查看新创建好了的表签
         ![](images/tag4.png)
-    6.  可以查看tag执行的变化状态
+    6.可以查看tag执行的变化状态
         ![](images/tag5.png)
-    7.  在服务器上用命令查看结果
+    7.在服务器上用命令查看结果
         ![](images/linux2.png)

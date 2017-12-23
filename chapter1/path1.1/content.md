@@ -10,7 +10,7 @@
     -  2.给宽带协议接口打基础镜像.
         -  具体步骤入下:
             -  cd /home/was/docker-compose/rc-guoling/code/kdxy_interface_service_anhui20171222
-            -  ![](images/ml2.png)
+               ![](images/ml2.png)
             - docker build -t rc-image-guoling-kdxy_interface_service:v201712223 .
     -  3.创建并运行容器(接口需要指定端口,左边是宿主机中规定的端口,右边是容器对外暴露的端口)
         -  docker run -i -t -p 6006:6006 --name kdxy_interface  rc-image-guoling-kdxy_interface_service:v201712223 /bin/bash
