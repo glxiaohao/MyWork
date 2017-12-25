@@ -55,8 +55,8 @@
     docker tag prod-image-kdxy-order-status-notice-consumer:20171222_01 localhost:5000/prod-image-kdxy-order-status-notice-consumer:20171222_01
 5.  把被标记的镜像推到仓库
     docker push localhost:5000/prod-image-kdxy-order-status-notice-consumer:20171222_01
-6.  去10.128.2.96服务器将仓库中的镜像pull下来 
-    docker push localhost:5000/prod-image-kdxy-order-status-notice-consumer:20171222_01
+6.  去10.128.2.96服务器将仓库中的镜像pull下来 (如果用docker-compose.yml 起服务就不用走这一步)
+    docker pull localhost:5000/prod-image-kdxy-order-status-notice-consumer:20171222_01
 7.  cd /home/was/docker_compose/prod-guoling/kdxy-interface/kdxy-3.4  目录
 8.  vi docker-compose.yml文件
 9.  docker-compose.yml文件内容入下:
