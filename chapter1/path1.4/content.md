@@ -82,7 +82,7 @@
 ```
 
 10. 执行docker-cpmpose.yml文件,将conusmer跑起来.
-    docker stack deploy -c docker-compose.yml kdxy    # kdxy 只是取一个别名
+    docker stack deploy -c docker-compose.yml kdxy    # kdxy 只是取一个别名 
     注意：
     - 运行了2个服务	因为docker-cpmpose.yml文件中指定的是两个节点,所以跑了两个consumer.
     - 没有设置暴露端口   因为consumer或者job不需要对外暴露端口.
@@ -90,3 +90,6 @@
 				大意:    在冒号【:】左边的是宿主机的目录，右边是容器的目录  
 11. 查看节点服务是否正常启动
     ![](images/ser1.png)
+
+12. 如果docker-compose.yml运行过了,下次就只需要更新这个服务即可.
+-    docker service update --image 10.251.26.11:5000/kdxy-interface:master_20171227_gl kdxy_prod-guoling-kdxy-service-34
