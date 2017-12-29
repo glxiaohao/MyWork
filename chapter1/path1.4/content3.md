@@ -93,6 +93,29 @@
    
    docker service rm 服务ID   # 表示删除服务
 8. 如果服务没有启动可以检测代码哪里出错
-   docker ps -a|grep 粗略的镜像名
-   docker logs 进程ID号
+   docker ps -a   # 查最上面，时间最新的容器ID,可能容器不存在，可能还没有创建。
+   
+   docker logs 进程ID号   # 若这个容器存在,这个进程号应该可以查到你代码为啥出错.
    ![](images/ml01.png)
+
+
+# 后来全部升级为rsa加密版,并安装了lxml包 我对kdxy3.3的更新步骤入下:
+
+## 1. 在Dockerfile文件中安装lxml包
+![](images/az01.png)
+
+## 2. 改写.gitlab-ci.yml文件
+![](images/tp01.png)
+
+## 3. 将最新项目推送至服务器
+![](images/tp02.png)
+
+## 4. 在gitlab上新打一个tag
+![](images/tp03.png)
+![](images/tp04.png)
+![](images/tp05.png)
+![](images/tp06.png)
+
+## 5. 测试服务能否访问
+![](images/tp07.png)
+至此，大功告成...
