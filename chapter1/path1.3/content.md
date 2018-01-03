@@ -130,3 +130,7 @@
         ![](images/tag5.png)
     - 7.在服务器上用命令查看结果
         ![](images/linux2.png)
+
+- 7. docker service scale guoling_prod-guoling-kdxy-service-33=10
+- ![](images/tp01.png)
+
