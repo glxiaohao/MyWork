@@ -1,0 +1,1148 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6.6 MySQL查询 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="MySQL查询分组.html" />
+    
+    
+    <link rel="prev" href="6.5/备份与恢复.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chapter0/">
+            
+                <a href="../chapter0/">
+            
+                    
+                    0. Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chapter0/zhengshu/zhengshu.html">
+            
+                <a href="../chapter0/zhengshu/zhengshu.html">
+            
+                    
+                    0.1 证书生成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter1/">
+            
+                <a href="../chapter1/">
+            
+                    
+                    1. python基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter1/zhengze/zhengze.html">
+            
+                <a href="../chapter1/zhengze/zhengze.html">
+            
+                    
+                    1.1 正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter1/path/path.html">
+            
+                <a href="../chapter1/path/path.html">
+            
+                    
+                    1.2 环境变量配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter1/class/class.html">
+            
+                <a href="../chapter1/class/class.html">
+            
+                    
+                    1.3 类
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    2. markdown
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter2/title.html">
+            
+                <a href="../chapter2/title.html">
+            
+                    
+                    2.1 标题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter2/list.html">
+            
+                <a href="../chapter2/list.html">
+            
+                    
+                    2.2 列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chapter2/table.html">
+            
+                <a href="../chapter2/table.html">
+            
+                    
+                    2.3 表格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chapter2/font.html">
+            
+                <a href="../chapter2/font.html">
+            
+                    
+                    2.4 字体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../chapter2/picture.html">
+            
+                <a href="../chapter2/picture.html">
+            
+                    
+                    2.5 图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../chapter2/code.html">
+            
+                <a href="../chapter2/code.html">
+            
+                    
+                    2.6 代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../chapter2/hotKey.html">
+            
+                <a href="../chapter2/hotKey.html">
+            
+                    
+                    2.7 快捷键
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../chapter2/link.html">
+            
+                <a href="../chapter2/link.html">
+            
+                    
+                    2.8 Markdown链接及脚注
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../chapter2/语句块.html">
+            
+                <a href="../chapter2/语句块.html">
+            
+                    
+                    2.9 语句块
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    3. gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter4/">
+            
+                <a href="../chapter4/">
+            
+                    
+                    4. git
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter5/">
+            
+                <a href="../chapter5/">
+            
+                    
+                    5. docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter5/docker常用命令.html">
+            
+                <a href="../chapter5/docker常用命令.html">
+            
+                    
+                    5.1 docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    6. MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="安装与使用.html">
+            
+                <a href="安装与使用.html">
+            
+                    
+                    6.1 安装与使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="数据完整性.html">
+            
+                <a href="数据完整性.html">
+            
+                    
+                    6.2 数据完整性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="数据库操作.html">
+            
+                <a href="数据库操作.html">
+            
+                    
+                    6.3 数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="Navicat操作.html">
+            
+                <a href="Navicat操作.html">
+            
+                    
+                    6.4 Navicat操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.4.1" data-path="6.4/数据库操作.html">
+            
+                <a href="6.4/数据库操作.html">
+            
+                    
+                    6.4.1 数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4.2" data-path="6.4/数据表操作.html">
+            
+                <a href="6.4/数据表操作.html">
+            
+                    
+                    6.4.2 数据表操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4.3" data-path="6.4/数据操作.html">
+            
+                <a href="6.4/数据操作.html">
+            
+                    
+                    6.4.3 数据操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="数据表设计.html">
+            
+                <a href="数据表设计.html">
+            
+                    
+                    6.5 数据表设计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.5.1" data-path="6.5/数据表操作.html">
+            
+                <a href="6.5/数据表操作.html">
+            
+                    
+                    6.5.1 数据操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.2" data-path="6.5/数据表操作.html">
+            
+                <a href="6.5/数据表操作.html">
+            
+                    
+                    6.5.2 数据表操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.3" data-path="6.5/数据crud.html">
+            
+                <a href="6.5/数据crud.html">
+            
+                    
+                    6.5.3 数据crud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.4" data-path="6.5/备份与恢复.html">
+            
+                <a href="6.5/备份与恢复.html">
+            
+                    
+                    6.5.4 备份与恢复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.6" data-path="MySQL查询.html">
+            
+                <a href="MySQL查询.html">
+            
+                    
+                    6.6 MySQL查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="MySQL查询分组.html">
+            
+                <a href="MySQL查询分组.html">
+            
+                    
+                    6.7 MySQL查询分组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="MySQL扩展.html">
+            
+                <a href="MySQL扩展.html">
+            
+                    
+                    6.8 MySQL扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="MySQL与python交互.html">
+            
+                <a href="MySQL与python交互.html">
+            
+                    
+                    6.9 MySQL与python交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    7. oracle
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter7/install.html">
+            
+                <a href="../chapter7/install.html">
+            
+                    
+                    7.1 安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter7/idea.html">
+            
+                <a href="../chapter7/idea.html">
+            
+                    
+                    7.2 概念知识
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter7/grammar.html">
+            
+                <a href="../chapter7/grammar.html">
+            
+                    
+                    7.3 基础语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    8. redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../chapter10/">
+            
+                <a href="../chapter10/">
+            
+                    
+                    9. mongodb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    10. 常用框架
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../chapter7/django/django.html">
+            
+                <a href="../chapter7/django/django.html">
+            
+                    
+                    10.1 django
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../chapter7/tornado/tornado.html">
+            
+                <a href="../chapter7/tornado/tornado.html">
+            
+                    
+                    10.2 tornado
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../chapter7/flask/flask.html">
+            
+                <a href="../chapter7/flask/flask.html">
+            
+                    
+                    10.3 flask
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../chapter7/gevent/gevent.html">
+            
+                <a href="../chapter7/gevent/gevent.html">
+            
+                    
+                    10.4 gevent
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.4.1" data-path="../chapter7/gevent/确定性.html">
+            
+                <a href="../chapter7/gevent/确定性.html">
+            
+                    
+                    10.4.1 确定性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4.2" data-path="../chapter7/gevent/SSLSocket.html">
+            
+                <a href="../chapter7/gevent/SSLSocket.html">
+            
+                    
+                    10.4.2 SSLSocket
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    11. rabbitmq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    12. lua
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../chapter10/">
+            
+                <a href="../chapter10/">
+            
+                    
+                    13. javasript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../chapter11/">
+            
+                <a href="../chapter11/">
+            
+                    
+                    14. java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../chapter12/">
+            
+                <a href="../chapter12/">
+            
+                    
+                    15. c
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../chapter13/">
+            
+                <a href="../chapter13/">
+            
+                    
+                    16. c++
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../chapter14/">
+            
+                <a href="../chapter14/">
+            
+                    
+                    17. android
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../chapter15/">
+            
+                <a href="../chapter15/">
+            
+                    
+                    18. cocos2dx
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.6 MySQL查询</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mysql&#x67E5;&#x8BE2;">MySQL&#x67E5;&#x8BE2;</h1>
+<p>&#x67E5;&#x8BE2;&#x6240;&#x6709;&#x5B57;&#x6BB5;</p>
+<pre><code>select * from &#x8868;&#x540D;;
+&#x4F8B;&#xFF1A;
+select * from students;
+</code></pre><p>&#x7ED9;&#x5217;&#x6216;&#x8005;&#x8868;&#x8D77;&#x522B;&#x540D;</p>
+<pre><code>select id as ID&#x7F16;&#x53F7;,name as &#x59D3;&#x540D; from students as &#x5B66;&#x751F;&#x8868;;
+</code></pre><p>&#x6D88;&#x9664;&#x91CD;&#x590D;&#x884C;</p>
+<pre><code>create table temp(
+id int not null,
+name varchar(10),
+isdelete bit default 0
+);
+insert into temp(id,name) values(1,&apos;xx1&apos;);
+insert into temp(id,name) values(1,&apos;xx1&apos;);
+insert into temp(id,name) values(1,&apos;xx2&apos;);
+insert into temp(id,name) values(1,&apos;xx2&apos;);
+insert into temp(id,name) values(1,&apos;xx3&apos;);
+insert into temp(id,name) values(1,&apos;xx4&apos;);
+
+insert into temp(id,name) values(2017121401,&apos;01&apos;);
+insert into temp(id,name) values(2017121402,&apos;01&apos;);
+insert into temp(id,name) values(2017121403,&apos;01&apos;);
+insert into temp(id,name) values(2017121404,&apos;01&apos;);
+
+select distinct id from temp;
+select distinct name from temp;
+select distinct name,id from temp;
+</code></pre><pre><code>&#x4F8B;1&#xFF1A;&#x67E5;&#x8BE2;&#x7F16;&#x53F7;&#x5927;&#x4E8E;3&#x7684;&#x5B66;&#x751F;
+select * from students where id&gt;3;
+
+&#x4F8B;2&#xFF1A;&#x67E5;&#x8BE2;&#x7F16;&#x53F7;&#x4E0D;&#x5927;&#x4E8E;4&#x7684;&#x79D1;&#x76EE;
+select * from subjects where id&lt;=4;
+
+&#x4F8B;3&#xFF1A;&#x67E5;&#x8BE2;&#x59D3;&#x540D;&#x4E0D;&#x662F;&#x201C;&#x9EC4;&#x84C9;&#x201D;&#x7684;&#x5B66;&#x751F;
+select * from students where sname!=&apos;&#x9EC4;&#x84C9;&apos;;
+
+&#x4F8B;4&#xFF1A;&#x67E5;&#x8BE2;&#x6CA1;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5B66;&#x751F;
+select * from students where isdelete=0;
+
+&#x4F8B;5&#xFF1A;&#x67E5;&#x8BE2;&#x7F16;&#x53F7;&#x5927;&#x4E8E;3&#x7684;&#x5973;&#x540C;&#x5B66;
+select * from students where id&gt;3 and gender=0;
+
+&#x4F8B;6&#xFF1A;&#x67E5;&#x8BE2;&#x7F16;&#x53F7;&#x5C0F;&#x4E8E;4&#x6216;&#x6CA1;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5B66;&#x751F;
+select * from students where id&lt;4 or isdelete=0;
+
+&#x4F8B;7&#xFF1A;&#x67E5;&#x8BE2;&#x59D3;&#x9EC4;&#x7684;&#x5B66;&#x751F;
+select * from students where sname like &apos;&#x9EC4;%&apos;;
+
+&#x4F8B;8&#xFF1A;&#x67E5;&#x8BE2;&#x59D3;&#x9EC4;&#x5E76;&#x4E14;&#x540D;&#x5B57;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x7684;&#x5B66;&#x751F;
+select * from students where sname like &apos;&#x9EC4;_&apos;;
+
+&#x4F8B;9&#xFF1A;&#x67E5;&#x8BE2;&#x59D3;&#x9EC4;&#x6216;&#x53EB;&#x9756;&#x7684;&#x5B66;&#x751F;
+select * from students where sname like &apos;&#x9EC4;%&apos; or sname like &apos;%&#x9756;&apos;;
+
+&#x4F8B;10&#xFF1A;&#x67E5;&#x8BE2;&#x7F16;&#x53F7;&#x662F;1&#x6216;3&#x6216;8&#x7684;&#x5B66;&#x751F;
+select * from students where id in(1,3,8);
+
+&#x4F8B;11&#xFF1A;&#x67E5;&#x8BE2;&#x5B66;&#x751F;&#x662F;3&#x81F3;8&#x7684;&#x5B66;&#x751F;
+select * from students where id between 3 and 8;
+
+&#x4F8B;12&#xFF1A;&#x67E5;&#x8BE2;&#x5B66;&#x751F;&#x662F;3&#x81F3;8&#x7684;&#x7537;&#x751F;
+select * from students where id between 3 and 8 and gender=1;
+
+&#x4F8B;13&#xFF1A;&#x67E5;&#x8BE2;&#x6CA1;&#x6709;&#x586B;&#x5199;&#x5730;&#x5740;&#x7684;&#x5B66;&#x751F;
+select * from students where hometown is null;
+
+&#x4F8B;14&#xFF1A;&#x67E5;&#x8BE2;&#x586B;&#x5199;&#x4E86;&#x5730;&#x5740;&#x7684;&#x5B66;&#x751F;
+select * from students where hometown is not null;
+
+&#x4F8B;15&#xFF1A;&#x67E5;&#x8BE2;&#x586B;&#x5199;&#x4E86;&#x5730;&#x5740;&#x7684;&#x5973;&#x751F;
+select * from students where hometown is not null and gender=0;
+</code></pre><h2 id="&#x4F18;&#x5148;&#x7EA7;">&#x4F18;&#x5148;&#x7EA7;</h2>
+<ul>
+<li>&#x4F18;&#x5148;&#x7EA7;&#x7531;&#x9AD8;&#x5230;&#x4F4E;&#x7684;&#x987A;&#x5E8F;&#x4E3A;&#xFF1A;&#x5C0F;&#x62EC;&#x53F7;&#xFF0C;not&#xFF0C;&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</li>
+<li>and&#x6BD4;or&#x5148;&#x8FD0;&#x7B97;&#xFF0C;&#x5982;&#x679C;&#x540C;&#x65F6;&#x51FA;&#x73B0;&#x5E76;&#x5E0C;&#x671B;&#x5148;&#x7B97;or&#xFF0C;&#x9700;&#x8981;&#x7ED3;&#x5408;()&#x4F7F;&#x7528;</li>
+</ul>
+<h2 id="&#x805A;&#x5408;&#x51FD;&#x6570;">&#x805A;&#x5408;&#x51FD;&#x6570;</h2>
+<ul>
+<li>&#x4E3A;&#x4E86;&#x5FEB;&#x901F;&#x5F97;&#x5230;&#x7EDF;&#x8BA1;&#x6570;&#x636E;&#xFF0C;&#x7ECF;&#x5E38;&#x4F1A;&#x7528;&#x5230;&#x5982;&#x4E0B;5&#x4E2A;&#x805A;&#x5408;&#x51FD;&#x6570;:</li>
+<li>count(), max(), min(), sum(), avg()
+```
+&#x4F8B;1&#xFF1A;&#x67E5;&#x8BE2;&#x5B66;&#x751F;&#x603B;&#x6570;
+select count(*) from students;</li>
+</ul>
+<p>&#x4F8B;2&#xFF1A;&#x67E5;&#x8BE2;&#x5973;&#x751F;&#x7684;&#x7F16;&#x53F7;&#x6700;&#x5927;&#x503C;
+select max(id) from students where gender=0;</p>
+<p>&#x4F8B;3&#xFF1A;&#x67E5;&#x8BE2;&#x672A;&#x5220;&#x9664;&#x7684;&#x5B66;&#x751F;&#x6700;&#x5C0F;&#x7F16;&#x53F7;
+select min(id) from students where isdelete=0;</p>
+<p>&#x4F8B;4&#xFF1A;&#x67E5;&#x8BE2;&#x7537;&#x751F;&#x7684;&#x7F16;&#x53F7;&#x4E4B;&#x548C;
+select sum(id) from students where gender=1;</p>
+<p>&#x4F8B;5&#xFF1A;&#x67E5;&#x8BE2;&#x672A;&#x5220;&#x9664;&#x5973;&#x751F;&#x7684;&#x7F16;&#x53F7;&#x5E73;&#x5747;&#x503C;
+select avg(id) from students where isdelete=0 and gender=0;</p>
+<pre><code>
+## &#x5206;&#x7EC4;
+- &#x6309;&#x7167;&#x5B57;&#x6BB5;&#x5206;&#x7EC4;&#xFF0C;&#x8868;&#x793A;&#x6B64;&#x5B57;&#x6BB5;&#x76F8;&#x540C;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x653E;&#x5230;&#x4E00;&#x4E2A;&#x7EC4;&#x4E2D;
+- &#x8BED;&#x6CD5;&#xFF1A;
+select &#x5217;1,&#x5217;2,&#x805A;&#x5408;... from &#x8868;&#x540D; group by &#x5217;1,&#x5217;2...
+</code></pre><p>&#x4F8B;1&#xFF1A;&#x67E5;&#x8BE2;id&#x53F7;&#x603B;&#x6570;
+select id as ID&#x7F16;&#x53F7;,count(*)  from temp group by id;
+```</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.5/备份与恢复.html" class="navigation navigation-prev " aria-label="Previous page: 6.5.4 备份与恢复">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="MySQL查询分组.html" class="navigation navigation-next " aria-label="Next page: 6.7 MySQL查询分组">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.6 MySQL查询","level":"1.8.6","depth":2,"next":{"title":"6.7 MySQL查询分组","level":"1.8.7","depth":2,"path":"chapter6/MySQL查询分组.md","ref":"chapter6/MySQL查询分组.md","articles":[]},"previous":{"title":"6.5.4 备份与恢复","level":"1.8.5.4","depth":3,"path":"chapter6/6.5/备份与恢复.md","ref":"chapter6/6.5/备份与恢复.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6/MySQL查询.md","mtime":"2017-12-20T07:26:41.318Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-12-28T16:57:52.852Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
